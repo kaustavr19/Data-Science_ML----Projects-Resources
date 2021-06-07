@@ -426,3 +426,185 @@ class1_students = [45, 15, 35, 25, 30]
 plt.pie(class1_students, labels = classes)
 plt.show()
 
+""">Syntax: plt.pie([‘x’,‘explode=None’,‘labels=None’,‘colors=None’,‘autopct=None’,
+‘pctdistance=0.6’,‘shadow=False’,‘labeldistance=1.1’,‘startangle=None’,‘radius=None’,‘counterclock=True’,‘wedgeprops=None’,‘textprops=None’,‘center=(0, 0)’,‘frame=False’,‘rotatelabels=False’,‘*’,‘data=None’],)
+
+<u>Parameters</u>:
+<br>x : array-like
+<br>explode : array-like, optional, default: None
+<br>labels : list, optional, default: None
+<br>colors : array-like, optional, default: None
+<br>autopct : None (default), string, or function, optional
+<br>pctdistance : float, optional, default: 0.6
+<br>shadow : bool, optional, default: False
+<br>labeldistance : float, optional, default: 1.1
+<br>startangle : float, optional, default: None
+<br>radius : float, optional, default: None
+<br>counterclock : bool, optional, default: True
+<br>wedgeprops : dict, optional, default: None
+—- example, you can pass in wedgeprops = {‘linewidth’: 3}
+<br>textprops : dict, optional, default: None
+<br>center : list of float, optional, default: (0, 0)
+<br>frame : bool, optional, default: False
+<br>rotatelabels : bool, optional, default: False
+"""
+
+#plotting pie chart using different parameters
+
+explode = [0.03,0,0.1,0,0] # To slice the particuler section
+colors = ["c", 'b','r','m','y'] # Color of each section
+textprops = {"fontsize":15} # Font size of text in pie chart
+ 
+plt.pie(class1_students, # Values
+        labels = classes, # Labels for each sections
+        explode = explode, # To slice the particuler section
+        colors =colors, # Color of each section
+        autopct = "%0.2f%%", # Show data in percentage with 2 decimal point
+        shadow = True, # Showing shadow of pie chart
+        radius = 1.4, # Radius to increase or decrease the size of pie chart 
+       startangle = 270, # Start angle of first section
+        textprops =textprops) 
+ 
+plt.show() # To show pie chart only
+
+#plotting pie-chart with legend
+#plotting pie chart using different parameters
+
+explode = [0.03,0,0.1,0,0] # To slice the particuler section
+colors = ["c", 'b','r','m','y'] # Color of each section
+textprops = {"fontsize":15} # Font size of text in pie chart
+ 
+plt.pie(class1_students, # Values
+        labels = classes, # Labels for each sections
+        explode = explode, # To slice the particuler section
+        colors =colors, # Color of each section
+        autopct = "%0.2f%%", # Show data in percentage with 2 decimal point
+        shadow = True, # Showing shadow of pie chart
+        radius = 1.4, # Radius to increase or decrease the size of pie chart 
+       startangle = 270, # Start angle of first section
+        textprops =textprops) 
+plt.legend() #to show legend 
+plt.show() # To show pie chart only
+
+#plotting pie-chart using even more parameters
+plt.figure(figsize = (4,3))
+wedgeprops = {"linewidth": 4, 'width':1, "edgecolor":"k"} # Width = 1
+plt.pie(
+        class1_students, 
+        labels = classes, 
+        explode = explode, 
+        colors = colors, 
+        autopct = "%0.2f%%", 
+        pctdistance = 0.6, 
+        shadow =True, 
+        labeldistance = 1.6, 
+        startangle = 270,
+        radius = 1, 
+        counterclock = True, 
+        wedgeprops = wedgeprops,
+        textprops = textprops,
+        center=(2, 3),
+        frame=True,
+        rotatelabels=True
+        ) 
+plt.legend()
+plt.show()
+
+#plotting pie-chart using even more parameters
+plt.figure(figsize = (4,3))
+wedgeprops = {"linewidth": 4, 'width':2, "edgecolor":"k"} # Width = 1
+plt.pie(
+        class1_students, 
+        labels = classes, 
+        explode = explode, 
+        colors = colors, 
+        autopct = "%0.2f%%", 
+        pctdistance = 0.6, 
+        shadow =True, 
+        labeldistance = 1.6, 
+        startangle = 270,
+        radius = 1, 
+        counterclock = True, 
+        wedgeprops = wedgeprops,
+        textprops = textprops,
+        center=(2, 3),
+        frame=True,
+        rotatelabels=True
+        ) 
+plt.legend()
+plt.show()
+
+#plotting pie-chart using even more parameters
+plt.figure(figsize = (4,3))
+wedgeprops = {"linewidth": 4, 'width':3, "edgecolor":"k"} # Width = 1
+plt.pie(
+        class1_students, 
+        labels = classes, 
+        explode = explode, 
+        colors = colors, 
+        autopct = "%0.2f%%", 
+        pctdistance = 0.6, 
+        shadow =True, 
+        labeldistance = 1.6, 
+        startangle = 270,
+        radius = 1, 
+        counterclock = True, 
+        wedgeprops = wedgeprops,
+        textprops = textprops,
+        center=(2, 3),
+        frame=True,
+        rotatelabels=True
+        ) 
+plt.legend()
+plt.show()
+
+#plotting pie-chart using even more parameters
+plt.figure(figsize = (4,3))
+wedgeprops = {"linewidth": 4, 'width':4, "edgecolor":"k"} # Width = 1
+plt.pie(
+        class1_students, 
+        labels = classes, 
+        explode = explode, 
+        colors = colors, 
+        autopct = "%0.2f%%", 
+        pctdistance = 0.6, 
+        shadow =True, 
+        labeldistance = 1.6, 
+        startangle = 270,
+        radius = 1, 
+        counterclock = True, 
+        wedgeprops = wedgeprops,
+        textprops = textprops,
+        center=(2, 3),
+        frame=True,
+        rotatelabels=True
+        ) 
+plt.legend()
+plt.show()
+
+#plotting for fun
+import numpy as np
+plt.figure(figsize=(7,4))
+#plt.figure(figsize=(16,9)
+ 
+colors = ['r','w','r','w','r','w','r','w','r','w','r','w','r','w','r','w','r','w','r','w']
+labels = np.ones(20)
+#labels = [1.0,1.0,1.0,1.0,1.0,.........,1.0]
+ 
+plt.pie([1], colors="k", radius = 2.05)
+plt.pie(labels, colors=colors, radius = 2.0)
+ 
+plt.pie([1], colors="g", radius = 1.8)
+plt.pie([1], colors="y", radius = 1.6)
+plt.pie([1], colors="c", radius = 1.3)
+plt.pie([1], colors="b", radius = 1.1)
+plt.pie([1], colors="m", radius = 0.9)
+ 
+plt.pie([1], colors="b", radius = 0.31)
+plt.pie(labels, colors=colors, radius = 0.3)
+ 
+plt.pie([1], colors="w", radius = 0.2)
+plt.pie([1], colors="k", radius = 0.1)
+ 
+plt.show()
+
